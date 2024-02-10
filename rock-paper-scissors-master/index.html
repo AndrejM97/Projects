@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+    </style>
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+
+<div class="score__container">
+    <div class="score__container--left">
+        <h2>Rock</h2>
+        <h2>Paper</h2>
+        <h2>Scissors</h2>
+    </div>
+    <div class="score__container--right">
+        <p>Score</p>
+        <h2 class="score">0</h2>
+    </div>
+</div>
+<div class="center__container">
+    <div class="background-image"></div>
+    <div class="center__container--up">
+        <button class="paper"><img src="images/icon-paper.svg" alt="paper"></button>
+        <button class="scissors"><img src="images/icon-scissors.svg" alt="scissors"></button>
+    </div>
+    <div class="center__container--down">
+        <button class="rock"><img src="images/icon-rock.svg" alt="rock"></button>
+    </div>
+</div>
+<div class="winner__panel hidden">
+    <div class="winner__panel--wrapper">
+        <div class="block">
+            <h2>YOU PICKED</h2>
+            <div class="blue__circle">
+                <div class="players__choice">
+                    <img src="images/icon-paper.svg" alt="players icon">
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <h2 class="house__picked">THE HOUSE PICKED</h2>
+            <div class="blue__circle">
+                <div class="computers__choice hidden">
+                    <img src="images/icon-rock.svg" alt="computers icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="info-box">
+    <h2 class="winner__message"></h2>
+    <button class="play__again hidden">play again</button>
+</div>
+<div class="wrap-button">
+    <button class="rules">RULES</button>
+</div>
+<div class="modal hidden">
+    <div class="flex">
+        <h3>RULES</h3>
+        <img src="images/icon-close.svg" class="close" alt="close rules">
+    </div>
+    <div class="center">
+        <img src="images/image-rules.svg" alt="game rules">
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
