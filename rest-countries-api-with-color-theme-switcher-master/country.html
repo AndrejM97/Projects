@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/e8b0956347.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Where in the world?</h1>
+      <div class="dark__light__mode">
+          <i class="fa-regular fa-moon"></i>
+          <p class="dark__mode">Dark Mode</p>
+      </div>
+  </header>
+
+  <div class="link">
+      <a href="index.html">Back</a>
+  </div>
+  <div class="main__content">
+      <div class="target__flag__wrapper">
+          <img src=""  alt="flag" id="flag">
+      </div>
+
+      <div class="target__flag__content">
+        <h1 id="countryName"></h1>
+          <div class="flex">
+          <div class="block">
+            <p>Native Name: <span id="nativeName"></span></p>
+            <p>Population: <span id="population"></span></p>
+            <p>Region: <span id="region"></span></p>
+            <p>Sub Region: <span id="subregion"></span></p>
+            <p>Capital: <span id="capital"></span></p>
+          </div>
+          <div class="block second">
+            <p>Top Level Domain: <span id="topLevelDomain"></span></p>
+            <p>Currencies: <span id="currencies"></span></p>
+            <p>Languages: <span id="languages"></span></p>
+          </div>
+          </div>
+          <p class="borders">Border Countries: <span id="borders"></span></p>
+        </div>
+      </div>
+
+
+<script src="displayCountry.js"></script>
+</body>
+</html>
