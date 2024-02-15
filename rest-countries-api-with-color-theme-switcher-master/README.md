@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](../rest-countries-api-with-color-theme-switcher-master/design/solution/countries.png)
-![](../rest-countries-api-with-color-theme-switcher-master/design/solution/countries2.png)
+![solution](../rest-countries-api-with-color-theme-switcher-master/design/solution/countries.png)
+![solution](../rest-countries-api-with-color-theme-switcher-master/design/solution/countries2.png)
 ### Links
 
 - Live Site URL: [countries](https://andrejm97.github.io/Projects/rest-countries-api-with-color-theme-switcher-master/)
