@@ -222,6 +222,39 @@ a{
     border: 2px solid black;
 }
 
+#foundCountries {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#foundCountries ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foundCountries li {
+    padding: 1rem;
+    width: 20%;
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    list-style: none;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#foundCountries li:hover {
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.search__and__filter {
+}
+
 @media only screen and (max-width: 992px) {
 
     header {

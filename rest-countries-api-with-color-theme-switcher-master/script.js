@@ -74,3 +74,47 @@ flagsWrapper.addEventListener('click', function(event) {
 });
 
 
+const searchbar = document.getElementById('searchbar');
+const ul = document.createElement('ul');
+
+searchbar.addEventListener('keyup',function(event){
+
+    const input = event.target.value;
+    const countryNames = countriesData.map(country => country.name);
+    const foundCountries = countryNames.filter(countryName => countryName.includes(input));
+    const displayFoundCountries = document.getElementById('foundCountries');
+
+    ul.innerHTML = '';
+
+    if(input === ''){
+        displayFoundCountries.style.display = 'none';
+    }
+    else if(foundCountries.length > 0) {
+        for (let i = 0; i < Math.min(foundCountries.length, 10); i++) {
+            const li = document.createElement('li');
+            li.textContent = foundCountries[i];
+            ul.appendChild(li);
+        }
+
+        displayFoundCountries.style.display = 'block';
+        displayFoundCountries.appendChild(ul);
+    } else {
+        displayFoundCountries.innerHTML = '';
+        displayFoundCountries.style.display = 'none';
+    }
+
+
+});
+
+
+ul.addEventListener('click', function(e) {
+
+    const target = e.target.textContent;
+    const search = countriesData.find(country => country.name === target);
+
+    if (search) {
+        localStorage.setItem('selectedCountry', JSON.stringify(search));
+        window.location.href = 'country.html';
+    }
+});
+
