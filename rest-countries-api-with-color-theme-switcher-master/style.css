@@ -227,11 +227,15 @@ a{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin: 2rem 0;
 }
 
 #foundCountries ul {
     display: flex;
     flex-wrap: wrap;
+    border-radius: 1rem;
+    border: 1px solid var(--dark-gray);
+    padding: 1rem;
 }
 
 #foundCountries li {
@@ -249,6 +253,7 @@ a{
 
 #foundCountries li:hover {
     background-color: rgba(0,0,0,0.1);
+    border: 1px solid var(--dark-gray);
     cursor: pointer;
 }
 
