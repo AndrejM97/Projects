@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+  </style>
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+<div class="todo__wrapper">
+
+<div class="flex">
+  <h1>Todo</h1>
+  <img src="images/icon-sun.svg" alt="icon-sun">
+</div>
+  <label for="input"></label>
+  <div class="input__flex">
+  <input type="text"
+         placeholder="Create new todo..."
+         name="input"
+         id="input"
+         >
+  </div>
+  <ul id="list">
+  </ul>
+<div class="items__details">
+  <button class="items__left">0 items left</button>
+
+  <div class="all__active__completed">
+    <button class="all__tasks">All</button>
+    <button class="active__tasks">Active</button>
+    <button class="completed__tasks">Completed</button>
+  </div>
+
+  <div class="clear__completed">
+    <button class="clear__tasks">Clear Completed</button>
+  </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
