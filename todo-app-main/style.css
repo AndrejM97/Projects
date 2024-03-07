@@ -2,8 +2,6 @@
     --bright-blue: hsl(220, 98%, 61%);
 
     /* light theme*/
-    --very-light-gray: hsl(0, 0%, 98%);
-    --very-light-grayish-blue: hsl(236, 33%, 92%);
     --light-grayish-blue: hsl(233, 11%, 84%);
     --dark-grayish-blue: hsl(236, 9%, 61%);
     --very-dark-grayish-blue: hsl(235, 19%, 35%);
@@ -43,14 +41,18 @@ body {
 
 .flex {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
-    width: 80%;
-    margin-top: 2rem;
+    width: 40%;
+    margin-top: 5rem;
+}
+
+.mode img {
+    height: 45px;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 1rem;
     text-transform: uppercase;
 }
@@ -63,7 +65,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 40%;
     border-radius: 0.5rem;
 }
 
@@ -85,7 +87,7 @@ input {
 }
 
 #list{
-    width: 80%;
+    width: 40%;
     margin-top: 1rem;
 }
 
@@ -133,8 +135,13 @@ input {
     padding: 1rem;
 }
 
+.items__details button {
+    color: var(--dark-grayish-blue-dark);
+}
+
 button {
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .all__tasks:hover,
@@ -142,13 +149,17 @@ button {
 .completed__tasks:hover,
 .clear__tasks:hover {
     cursor: pointer;
-    color: yellow;
-    scale: 1.05;
+    color: var(--light-grayish-blue-hover);
+    scale: 1.01;
+}
+
+.close {
+    fill: var(--dark-grayish-blue-dark);
 }
 
 .close:hover {
-    scale: 1.2;
-    fill: red;
+    scale: 1.05;
+    fill: var(--light-grayish-blue-hover);
     cursor: pointer;
 }
 
@@ -157,13 +168,13 @@ button {
     align-items: center;
     justify-content: start;
     padding: 1rem;
-    border-bottom: 1px solid var(--light-grayish-blue);
+    border-bottom: 2px solid var(--very-dark-grayish-blue-dark-two);
+    color: var(--light-grayish-blue-dark);
 }
 
 .strikethrough {
    text-decoration: line-through;
-    color: var(--very-light-grayish-blue);
-    opacity: 0.5;
+    color: var(--dark-grayish-blue);
 }
 
 .inner {
@@ -192,7 +203,7 @@ button {
     transform: translateY(-50%);
     width: 100%;
     height: 100%;
-    border: 2px solid var(--dark-grayish-blue-dark);
+    border: 1px solid var(--dark-grayish-blue-dark);
     border-radius: 50%;
 }
 
@@ -214,8 +225,7 @@ button {
 
 .items__details {
     background-color: var(--very-dark-desaturated-blue);
-    padding: 2rem;
-    width: 80%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -231,6 +241,7 @@ button {
     background-color: var(--very-dark-desaturated-blue);
     color: white;
     margin: 0 1rem;
+    font-size: 1rem;
 }
 
 .active {
@@ -250,37 +261,65 @@ li:first-child {
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+.light__bg {
+    background-image: url("images/bg-desktop-light.jpg");
+    background-color: white;
+}
+
+.light__bg .items__details button,
+.light__bg .input__flex,
+.light__bg #input{
+    background-color: #ffffff;
+    color: var(--very-dark-grayish-blue);
+}
+
+.light__bg .list-item,
+.light__bg .items__details{
+    background-color: #ffffff;
+    color: var(--very-dark-grayish-blue);
+    border: 2px solid var(--light-grayish-blue);
+}
+
+.light__bg .checkbox-container input[type="checkbox"]:checked::before {
+    background-color: var(--bright-blue);
+}
+
+.light__bg .checkbox-container input[type="checkbox"]::before {
+    background-color: #ffffff;
+}
+
+
+@media only screen and (max-width: 992px){
     body {
-        background-image: url("images/bg-desktop-dark.jpg");
+        background-image: url("images/bg-mobile-dark.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 50vh;
+        height: 25vh;
         background-color: var(--very-dark-blue);
-        color: white;
-        font-family: "Josefin Sans", sans-serif;
     }
 
     .flex {
+        width: 80%;
         margin-top: 3rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #input {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     #list{
+        width: 80%;
         margin-top: 0;
     }
 
 
     .list-item p{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .svg {
@@ -301,6 +340,7 @@ li:first-child {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 80%;
     }
 
     .all__active__completed {
@@ -315,5 +355,16 @@ li:first-child {
         margin-bottom: 1rem;
     }
 
+    .checkbox-container input[type="checkbox"]:checked::before {
+        background-size: 15px;
+    }
 
+    .input__flex {
+        padding: 2rem;
+        width: 80%;
+    }
+
+    .mode img {
+        height: 35px;
+    }
 }

@@ -6,6 +6,7 @@ const activeDisplayBtn = document.querySelector('.active__tasks');
 const allDisplayBtn = document.querySelector('.all__tasks');
 const completedDisplayBtn = document.querySelector('.completed__tasks');
 const clearCompletedDisplayBtn = document.querySelector('.clear__tasks');
+
 let tasksStorage = [];
 let idCounter = 1;
 
@@ -160,12 +161,13 @@ const moonIcon = document.querySelector('.dark__mode');
 sunIcon.addEventListener('click', function() {
     sunIcon.classList.add('hidden');
     moonIcon.classList.remove('hidden');
-    console.log('sun hidden moon visible');
+    document.body.classList.add('light__bg');
 });
 
 moonIcon.addEventListener('click', function() {
     moonIcon.classList.add('hidden');
     sunIcon.classList.remove('hidden');
-    console.log('moon hidden sun visible');
+    document.body.classList.remove('light__bg');
 });
+
 
