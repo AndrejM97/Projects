@@ -1,20 +1,19 @@
 'use strict';
 
 const userInputContainer = document.getElementById('input');
-let myArray = [];
-let idCounter = 1;
 const itemsLeftDisplay = document.querySelector('.items__left');
 const activeDisplayBtn = document.querySelector('.active__tasks');
 const allDisplayBtn = document.querySelector('.all__tasks');
 const completedDisplayBtn = document.querySelector('.completed__tasks');
 const clearCompletedDisplayBtn = document.querySelector('.clear__tasks');
-
+let tasksStorage = [];
+let idCounter = 1;
 
 window.addEventListener('load', function() {
-    const storedData = localStorage.getItem('myArray');
+    const storedData = localStorage.getItem('tasksStorage');
     if (storedData) {
-        myArray = JSON.parse(storedData);
-        displayTasks(myArray);
+        tasksStorage = JSON.parse(storedData);
+        displayTasks(tasksStorage);
         updateTaskCount();
     }
 });
@@ -40,8 +39,8 @@ function addTask() {
         'completed': false,
     };
 
-    myArray.push(listInfos);
-    displayTasks(myArray);
+    tasksStorage.push(listInfos);
+    displayTasks(tasksStorage);
 }
 
 function displayTasks(tasks) {
@@ -76,7 +75,7 @@ function displayTasks(tasks) {
             const checkbox = event.target;
             const taskId = parseInt(checkbox.id);
 
-            const taskToUpdate = myArray.find(task => task.id === taskId);
+            const taskToUpdate = tasksStorage.find(task => task.id === taskId);
 
             if (taskToUpdate) {
                 taskToUpdate.completed = checkbox.checked;
@@ -89,10 +88,10 @@ function displayTasks(tasks) {
         const closeButton = listItem.querySelector('.close');
         closeButton.addEventListener('click', function (e) {
             const clickedCloseBtn = e.currentTarget;
-            const indexToDelete = myArray.findIndex(task => task.id === parseInt(clickedCloseBtn.id));
+            const indexToDelete = tasksStorage.findIndex(task => task.id === parseInt(clickedCloseBtn.id));
 
             if (indexToDelete !== -1) {
-                myArray.splice(indexToDelete, 1);
+                tasksStorage.splice(indexToDelete, 1);
                 updateLocalStorage();
             }
 
@@ -105,37 +104,37 @@ function displayTasks(tasks) {
 
 
 function updateTaskCount() {
-    const totalTaskCount = myArray.length;
-    const finishedTaskCount = myArray.filter(task => task.completed === true).length;
+    const totalTaskCount = tasksStorage.length;
+    const finishedTaskCount = tasksStorage.filter(task => task.completed === true).length;
     const remainingTaskCount = totalTaskCount - finishedTaskCount;
     itemsLeftDisplay.textContent = `${remainingTaskCount} items left`;
 }
 
 function updateLocalStorage() {
-    localStorage.setItem('myArray', JSON.stringify(myArray));
+    localStorage.setItem('tasksStorage', JSON.stringify(tasksStorage));
 }
 
 function displayAllTasks() {
     list.innerHTML = '';
-    displayTasks(myArray);
+    displayTasks(tasksStorage);
     updateTaskCount();
 }
 
 function displayAllActiveTasks() {
-    const activeTasks = myArray.filter(task => task.completed === false);
+    const activeTasks = tasksStorage.filter(task => task.completed === false);
     displayTasks(activeTasks);
     updateTaskCount();
 }
 
 function displayAllCompletedTasks() {
-    const completedTasks = myArray.filter(task => task.completed === true);
+    const completedTasks = tasksStorage.filter(task => task.completed === true);
     displayTasks(completedTasks);
     updateTaskCount();
 }
 
 function displayClearCompletedTasks() {
-    myArray = myArray.filter(task => !task.completed);
-    displayTasks(myArray);
+    tasksStorage = tasksStorage.filter(task => !task.completed);
+    displayTasks(tasksStorage);
     updateTaskCount();
 }
 
