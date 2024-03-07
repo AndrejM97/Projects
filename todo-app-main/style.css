@@ -114,7 +114,9 @@ input {
     vertical-align: middle;
 }
 
-.checkbox-container input[type="checkbox"]:hover {
+.checkbox-container input[type="checkbox"]:hover,
+.dark__mode,
+.light__mode{
     cursor: pointer;
 }
 
@@ -242,6 +244,10 @@ li{
 
 li:first-child {
     border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.hidden {
+    display: none;
 }
 
 @media only screen and (max-width: 600px){

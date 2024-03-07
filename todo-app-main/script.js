@@ -153,3 +153,19 @@ completedDisplayBtn.addEventListener('click', function() {
 clearCompletedDisplayBtn.addEventListener('click', function() {
     displayClearCompletedTasks();
 });
+
+const sunIcon = document.querySelector('.light__mode');
+const moonIcon = document.querySelector('.dark__mode');
+
+sunIcon.addEventListener('click', function() {
+    sunIcon.classList.add('hidden');
+    moonIcon.classList.remove('hidden');
+    console.log('sun hidden moon visible');
+});
+
+moonIcon.addEventListener('click', function() {
+    moonIcon.classList.add('hidden');
+    sunIcon.classList.remove('hidden');
+    console.log('moon hidden sun visible');
+});
+
