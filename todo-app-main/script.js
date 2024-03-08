@@ -1,6 +1,7 @@
 'use strict';
 
 const userInputContainer = document.getElementById('input');
+const list = document.getElementById('list');
 const itemsLeftDisplay = document.querySelector('.items__left');
 const activeDisplayBtn = document.querySelector('.active__tasks');
 const allDisplayBtn = document.querySelector('.all__tasks');
@@ -19,7 +20,7 @@ window.addEventListener('load', function() {
     }
 });
 
-input.addEventListener('keyup', function (event) {
+userInputContainer.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         addTask();
         updateLocalStorage();
@@ -29,7 +30,7 @@ input.addEventListener('keyup', function (event) {
 });
 
 function addTask() {
-    const userInput = input.value.trim();
+    const userInput = userInputContainer.value.trim();
     if (userInput === '') {
         return;
     }
