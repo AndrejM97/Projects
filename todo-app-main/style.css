@@ -1,6 +1,6 @@
 :root {
     --bright-blue: hsl(220, 98%, 61%);
-
+    --white: hsl(0,100%,100%);
     /* light theme*/
     --light-grayish-blue: hsl(233, 11%, 84%);
     --dark-grayish-blue: hsl(236, 9%, 61%);
@@ -12,7 +12,6 @@
     --light-grayish-blue-dark: hsl(234, 39%, 85%);
     --light-grayish-blue-hover: hsl(236, 33%, 92%);
     --dark-grayish-blue-dark: hsl(234, 11%, 52%);
-    --very-dark-grayish-blue-dark: hsl(233, 14%, 35%);
     --very-dark-grayish-blue-dark-two: hsl(237, 14%, 26%);
 }
 
@@ -27,7 +26,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: var(--very-dark-blue);
-    color: white;
+    color: var(--white);
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
 }
@@ -77,13 +76,13 @@ input[type=checkbox] {
 
 input {
     border: none;
-    color: white;
+    color: var(--white);
     background-color: var(--very-dark-desaturated-blue);
     width: 100%;
 }
 
 .round {
- background: white;
+ background: var(--white);
 }
 
 #list{
@@ -168,12 +167,12 @@ button {
     align-items: center;
     justify-content: start;
     padding: 1rem;
-    border-bottom: 2px solid var(--very-dark-grayish-blue-dark-two);
+    border-bottom: 1px solid var(--very-dark-grayish-blue-dark-two);
     color: var(--light-grayish-blue-dark);
 }
 
 .strikethrough {
-   text-decoration: line-through;
+    text-decoration: line-through;
     color: var(--dark-grayish-blue);
 }
 
@@ -239,7 +238,7 @@ button {
 button {
     border: none;
     background-color: var(--very-dark-desaturated-blue);
-    color: white;
+    color: var(--white);
     margin: 0 1rem;
     font-size: 1rem;
 }
@@ -253,31 +252,38 @@ li{
     background-color: var(--very-dark-desaturated-blue);
 }
 
-li:first-child {
-    border-radius: 0.5rem 0.5rem 0 0;
-}
-
 .hidden {
     display: none;
 }
 
 .light__bg {
     background-image: url("images/bg-desktop-light.jpg");
-    background-color: white;
+    background-color: var(--white);
+}
+
+.light__bg .input__flex {
+    border: 1px solid var(--light-grayish-blue);
 }
 
 .light__bg .items__details button,
 .light__bg .input__flex,
 .light__bg #input{
-    background-color: #ffffff;
+    background-color: var(--white);
     color: var(--very-dark-grayish-blue);
 }
 
-.light__bg .list-item,
-.light__bg .items__details{
-    background-color: #ffffff;
+
+.light__bg .list-item {
+    background-color: var(--white);
+    border: 1px solid var(--light-grayish-blue);
     color: var(--very-dark-grayish-blue);
-    border: 2px solid var(--light-grayish-blue);
+}
+
+
+.light__bg .items__details{
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    border: 1px solid var(--light-grayish-blue);
 }
 
 .light__bg .checkbox-container input[type="checkbox"]:checked::before {
@@ -285,7 +291,7 @@ li:first-child {
 }
 
 .light__bg .checkbox-container input[type="checkbox"]::before {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 

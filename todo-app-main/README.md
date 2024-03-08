@@ -8,8 +8,6 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
     - [Links](#links)
-- [My process](#my-process)
-    - [to-dos](#still-needs-to-be-done)
 ## Overview
 
 ### The challenge
@@ -24,11 +22,10 @@ Users should be able to:
 - Filter by all/active/complete todos
 - Clear all completed todos
 - Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list
 
 ### Screenshot
-
-- incoming
+![solution](../todo-app-main/images/solution/todo_darkmode.png)
+![solution](../todo-app-main/images/solution/todo_lightmode.png)
 
 ### Links
 
@@ -43,7 +40,3 @@ Users should be able to:
 - Javascript
 
 
-### still needs to be done
-
--enabling light-mode
--adding screenshot
