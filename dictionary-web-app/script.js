@@ -34,7 +34,7 @@ userInput.addEventListener('keyup', function (e) {
                     const phoneticsHtml = data[0].phonetics
                         .filter(audio => audio.audio !== '')
                         .map(audio => `
-                            <img src="/dictionary-web-app/starter-code/assets/images/icon-play.svg" alt="play button" data-audio="${audio.audio}" class="audio">
+                            <img src="/dictionary-web-app/images/icon-play.svg" alt="play button" data-audio="${audio.audio}" class="audio">
                         `).join('');
 
                     const definition = `${data[0]?.meanings[0]?.definitions
@@ -96,7 +96,7 @@ userInput.addEventListener('keyup', function (e) {
                         <div class="line"></div>
                         <div class="sources">
                             <p class="source">Source<span>${url}</span></p>
-                           <img src="/dictionary-web-app/starter-code/assets/images/icon-new-window.svg" alt="new window">
+                           <img src="/dictionary-web-app/images/icon-new-window.svg" alt="new window">
                           </div>
                     `;
 
