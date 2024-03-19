@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dictionary__wrapper">
+    <div class="popup hidden">
+
+    </div>
+    <div class="nav">
+        <div class="nav__left">
+            <img src="/dictionary-web-app/starter-code/assets/images/logo.svg" alt="logo">
+        </div>
+        <div class="nav__right">
+            <div class="font__name">
+                <ul class="dropdown hidden">
+                    <li id="sans__serif">Sans Serif</li>
+                    <li id="mono">Mono</li>
+                    <li id="serif">Serif</li>
+                </ul>
+
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider round"></span>
+                </label>
+
+                <img src="/dictionary-web-app/starter-code/assets/images/icon-arrow-down.svg" alt="arrow-down" class="icon__arrow">
+            </div>
+            <div class="toggle__mode">
+                <img src="/dictionary-web-app/starter-code/assets/images/icon-moon.svg" alt="moon">
+            </div>
+        </div>
+    </div>
+    <div class="input">
+        <label>
+            <input
+                    type="text"
+                    placeholder="Search for any word..."
+                    id="input"
+            >
+            <img src="/dictionary-web-app/starter-code/assets/images/icon-search.svg" alt="search">
+        </label>
+    </div>
+    <div class="searched__word" id="searched__word">
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
