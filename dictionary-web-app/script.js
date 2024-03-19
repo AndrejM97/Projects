@@ -30,7 +30,7 @@ userInput.addEventListener('keyup', function (e) {
                     return response.json();
                 })
                 .then((data) => {
-
+                    console.log(data)
                     const phoneticsHtml = data[0].phonetics
                         .filter(audio => audio.audio !== '')
                         .map(audio => `
@@ -49,11 +49,13 @@ userInput.addEventListener('keyup', function (e) {
 
 
 
-                    const def = `${data[0]?.meanings[0]?.definitions
-                        ?.filter(definition => definition.definition !== undefined)
-                        ?.map((definition) => `<li>${definition.definition}</li>`)
-                        .join('')}`;
+                    const definitions = data[0]?.meanings[1]?.definitions;
+                    const def = definitions ? definitions
+                            .filter(definition => definition.definition !== undefined)
+                            .map(definition => `<li>${definition.definition}</li>`)
+                            .join('') : '';
 
+                    const phonetic = data[0].phonetic ? data[0].phonetic : '';
 
 
                     const noun = data[0]?.meanings[0]?.partOfSpeech ? `<p>${data[0].meanings[0].partOfSpeech}</p>` : '';
@@ -66,7 +68,7 @@ userInput.addEventListener('keyup', function (e) {
                         <div class="flex">
                         <div class="block">
                             <h1 class="header">${data[0].word}</h1>
-                            <p class="blue light">${data[0].phonetic}</p>
+                            <p class="blue light">${phonetic}</p>
                         </div>
                           <p>${phoneticsHtml}</p>
                           </div>
