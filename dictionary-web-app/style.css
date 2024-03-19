@@ -14,26 +14,26 @@
 
 @font-face {
     font-family: 'Inconsolata';
-    src: url('/dictionary-web-app/starter-code/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf') format('truetype');
+    src: url('../dictionary-web-app/starter-code/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('/dictionary-web-app/starter-code/assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    src: url('../dictionary-web-app/starter-code/assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
     font-family: 'Lora';
-    src: url('/dictionary-web-app/starter-code/assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
+    src: url('../dictionary-web-app/starter-code/assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
     font-weight: 1 999;
 }
 
 @font-face {
     font-family: 'Lora';
-    src: url('/dictionary-web-app/starter-code/assets/fonts/lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../dictionary-web-app/starter-code/assets/fonts/lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
     font-style: italic;
     font-weight: 1 999;
 }
@@ -75,7 +75,6 @@ body {
 
 .nav img {
     height: 20px;
-    fill: green;
 }
 
 .font__name {
