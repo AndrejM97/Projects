@@ -93,21 +93,16 @@ input[type="checkbox"] {
     border: none;
     margin-top: 1rem;
     font-weight: 500;
-
 }
 
 .generate__btn:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px var(--synthetic-mint);
+    box-shadow: 0 0 2px var(--synthetic-mint);
     background-color: var(--dark);
     color: var(--synthetic-mint);
 }
 
-.generate__btn:hover img {
-   accent-color: red;
-}
-
-.generate__btn span {
+.generate__btn:hover span {
     margin: 0 1rem;
 }
 
@@ -149,7 +144,7 @@ input[type="checkbox"] {
     margin-right: auto;
     width: 15rem;
     background: var(--dark);
-    box-shadow: 0 0 1px var(--synthetic-mint);
+    border: 3px solid var(--synthetic-mint);
     padding: 2rem;
     font-size: 0.8rem;
     color: var(--synthetic-mint);
