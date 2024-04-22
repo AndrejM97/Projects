@@ -88,11 +88,12 @@ input[type="checkbox"] {
 
 .generate__btn {
     background-color: var(--synthetic-mint);
+    color: var(--river-styx);
     padding: 1em 2em;
     border: none;
-
     margin-top: 1rem;
     font-weight: 500;
+
 }
 
 .generate__btn:hover {

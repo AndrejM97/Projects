@@ -71,7 +71,8 @@ generateBtn.addEventListener('click',function (){
 
 });
 
-range.addEventListener('mousemove',function(){
+
+function changeSecurityText(){
     characterLengthEl.textContent = Math.ceil(range.value * 0.2);
     if(characterLengthEl.textContent <= 4){
         displaySecurityText('TOO WEAK');
@@ -86,7 +87,7 @@ range.addEventListener('mousemove',function(){
         displaySecurityText('STRONG');
         addBarsColor(4,'green','');
     }
-})
+}
 
 function displaySecurityText(text){
     securityTextEl.textContent = text;
@@ -143,3 +144,10 @@ function copyTextToClipboard(text) {
     navigator.clipboard.writeText(text);
 }
 
+range.addEventListener('mousemove',function(){
+    changeSecurityText();
+})
+
+range.addEventListener('touchmove',function(){
+    changeSecurityText();
+})
