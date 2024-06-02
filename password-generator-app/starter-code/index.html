@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+  </style>
+
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+
+<h3>Password Generator</h3>
+<div class="wrapper">
+  <div class="up">
+    <div id="password">
+    </div>
+    <img src="assets/images/icon-copy.svg" alt="copy icon" class="copy">
+  </div>
+
+<div class="down">
+  <p class="space">Character Length<span class="characterLengthEl">10</span></p>
+    <label>
+      <input type="range" id="range">
+    </label>
+
+    <label>
+      <input type="checkbox" id="upperCaseLetters">
+      Include Uppercase Letters
+    </label>
+
+    <label>
+      <input type="checkbox" id="lowerCaseLetters">
+      Include Lowercase Letters
+    </label>
+
+    <label>
+      <input type="checkbox" id="numbers">
+      Include Numbers
+    </label>
+
+    <label>
+      <input type="checkbox" id="symbols">
+      Include Symbols
+    </label>
+
+    <div class="strength">
+      <p>STRENGTH</p>
+      <div class="end">
+          <p class="security__text"></p>
+          <p class="security__bars"></p>
+          <p class="security__bars"></p>
+          <p class="security__bars"></p>
+          <p class="security__bars"></p>
+      </div>
+  </div>
+
+  <button class="generate__btn">GENERATE
+    <span>
+      <img src="assets/images/icon-arrow-right.svg" alt="arrow right">
+    </span>
+  </button>
+</div>
+</div>
+
+<script src="https://kit.fontawesome.com/e8b0956347.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
