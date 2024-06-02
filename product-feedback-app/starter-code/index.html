@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="index.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <title>Frontend Mentor | Product feedback app</title>
+</head>
+<body>
+<div class="sidebar">
+  <div class="sidebar__header">
+    <h3>Frontend Mentor</h3>
+    <p>Feedback Board</p>
+  </div>
+
+  <div class="button__wrapper">
+    <button class="choice">All</button>
+    <button class="choice">Ui</button>
+    <button class="choice">Ux</button>
+    <button class="choice">Enhancement</button>
+    <button class="choice">Bug</button>
+    <button class="choice">Feature</button>
+  </div>
+
+  <div class="roadmap__wrapper">
+  </div>
+
+</div>
+<div class="main">
+  <div class="panel">
+    <div class="panel__start">
+    <img src="assets/suggestions/icon-suggestions.svg" alt="suggestions icon">
+
+      <p>Suggestions</p>
+      <div class="sort__by">Sort by: Most upvotes
+        <div class="dropdown hidden">
+          <p class="most__upvote">Most upvotes</p>
+          <p class="least__upvote">Least upvotes</p>
+          <p class="most__commented">Most comments</p>
+          <p class="least__commented">Least comments</p>
+        </div>
+    </div>
+    </div>
+    <div class="panel__end">
+      <button class="feedback">
+        <span>Add Feedback
+          <img src="assets/shared/icon-plus.svg" alt="icon plus" class="plus__icon">
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="feedbacks">
+
+</div>
+</div>
+
+<script src="script.js"></script>
+<script src="newFeedback.js"></script>
+</body>
+</html>

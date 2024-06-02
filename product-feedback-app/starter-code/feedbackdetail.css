@@ -1,0 +1,72 @@
+:root {
+    --c1: #AD1FEA;
+    --c2: #4661E6;
+    --c3: #373F68;
+    --c4: #FFFFFF;
+    --c5: #F2F4FF;
+    --c6: #f7F8FD;
+    --c7: #3A4374;
+    --c8: #647196;
+    --c9: #F49F85;
+    --c10:#62BCFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--c5);
+}
+
+.feedback__detail__wrapper {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.feedback {
+    display: flex;
+    background: var(--c4);
+    border-radius: 0.5rem;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feedback__btn {
+    background: var(--c10);
+    padding: 1rem;
+}
+
+.feedback__detail__wrapper {
+    background: green;
+    width: 50vw;
+}
+
+.edit__feedback__btn {
+    padding: 1em 2em;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--c2);
+    color: var(--c4);
+    font-weight: 700;
+}
+
+.feedback__btn {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.feedback__content {
+ background: green;
+}
+
+
+

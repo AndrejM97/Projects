@@ -1,0 +1,171 @@
+:root {
+    --c1: #AD1FEA;
+    --c2: #4661E6;
+    --c3: #373F68;
+    --c4: #FFFFFF;
+    --c5: #F2F4FF;
+    --c6: #f7F8FD;
+    --c7: #3A4374;
+    --c8: #647196;
+    --c9: #F49F85;
+    --c10:#62BCFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    font-family: "Jost", sans-serif;
+    background: var(--c5);
+}
+
+.header__panel {
+    background: var(--c3);
+    color: var(--c4);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.left__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.add__feedback__btn {
+    color: var(--c4);
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    background: var(--c1);
+}
+
+.roadmap {
+    display: flex;
+}
+
+.planned__wrapper,
+.in__progress__wrapper,
+.live__wrapper {
+    flex: 1;
+    min-height: 100dvh;
+}
+
+.planned__counter,
+.in__progress__counter,
+.live__counter {
+    color: var(--c7);
+    padding: 3rem 1rem 0 1rem;
+    font-size: 1rem;
+}
+
+.header {
+    color: var(--c8);
+    padding: 0 1rem 1rem 1rem;
+}
+
+.planned__data,
+.in__progress__data,
+.live__data{
+    padding: 1rem;
+    background: var(--c4);
+    border-radius: 0.4rem;
+    margin: 1rem;
+    height: auto;
+}
+
+.planned__data {
+    border-top: 6px solid var(--c9);
+}
+
+.in__progress__data {
+    border-top: 6px solid var(--c1);
+}
+
+.live__data {
+    border-top: 6px solid var(--c10);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.75rem;
+}
+
+.orange {
+    background: var(--c9);
+}
+
+.purple {
+    background: var(--c1);
+}
+
+.status {
+    color: var(--c8);
+}
+
+.bold {
+    color: var(--c7);
+    font-weight: 700;
+}
+
+.description {
+    margin-bottom: 1rem;
+    color: var(--c8);
+}
+
+.category,
+.upvote__btn{
+    background: var(--c5);
+    color: var(--c2);
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+.category {
+    padding: 0.25rem 1rem;
+}
+
+.upvote__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    color: var(--c7);
+}
+
+.upvote__btn img {
+ padding: 0 0.5rem 0 0;
+}
+
+.space {
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comments {
+    display: flex;
+    align-items: center;
+    color: var(--c7);
+    font-weight: 600;
+}
+
+.comments img {
+    margin-right: 0.5rem;
+}

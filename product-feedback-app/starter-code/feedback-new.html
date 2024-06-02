@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="newfeedback.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+
+  <title>Frontend Mentor | Product feedback app</title>
+</head>
+<body>
+
+<span class="error hidden">error! inputs are empty</span>
+<span class="success hidden">Feedback submitted successfully</span>
+<div class="feedback__wrapper">
+    <span class="go__back">
+      <img src="assets/shared/icon-arrow-left.svg" alt="icon left">
+      Go back
+    </span>
+
+  <div class="feedback__content">
+    <h1>Create New Feedback</h1>
+    <form class="title__form">
+      <label for="title">
+        <span class="bold">Feedback Title</span>
+        <span>Add a short, descriptive headline</span>
+      </label>
+      <textarea id="title" maxlength="50"></textarea>
+    </form>
+    <div class="spinner spinner--search"></div>
+    <div class="dropdown">
+      <label for="category">
+        <span class="bold">Category</span>
+        <span>Choose a category for your feedback</span>
+      </label>
+      <select name="category" id="category">
+        <option value="feature">Feature</option>
+        <option value="ui">UI</option>
+        <option value="ux">UX</option>
+        <option value="enhancement">Enhancement</option>
+        <option value="bug">Bug</option>
+      </select>
+    </div>
+
+    <form>
+      <label for="detail">
+        <span>Feedback Detail</span>
+        <span>Include any specific comments on what should be improved, added, etc.</span>
+      </label>
+      <textarea id="detail" maxlength="250"></textarea>
+    </form>
+
+    <button>Cancel</button>
+    <button class="add__feedback__btn">Add Feedback</button>
+  </div>
+</div>
+
+
+<script src="newFeedback.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
